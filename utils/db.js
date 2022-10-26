@@ -1,7 +1,8 @@
 // This code is in the file server/utils/db.js
 import dotenv from "dotenv";
-
 import * as pg from "pg";
+
+dotenv.config();
 const { Pool } = pg.default;
 
 const pool = new Pool({
