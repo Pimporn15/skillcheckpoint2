@@ -59,14 +59,15 @@ postRouter.put("/:id", async (req, res) => {
   const postId = req.params.id;
 
   await pool.query(
-    `update post set  title = $1 , content = $2, 
-    category_id = $3 ,url = $4, updated_at = $5  `,
+    `update post set  title = $1 , content  =$2, 
+    category_id = $3 ,url = $4, updated_at = $5   where post_id =  $6`,
     [
       updatedPost.title,
       updatedPost.content,
       updatedPost.category_id,
       updatedPost.url,
       updatedPost.updated_at,
+      postId,
     ]
   );
 

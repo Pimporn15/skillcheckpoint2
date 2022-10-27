@@ -17,7 +17,7 @@ const pool = new Pool({
 //   user: "postgres",
 //   host: "localhost",
 //   database: "skillcheckpoint",
-//   password: "15052533",
+//   password: "
 //   port: 5432,
 // });
 export { pool };
